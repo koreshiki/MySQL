@@ -80,30 +80,6 @@
         },
         "if_true": "%user%@%host%:%port%",
         "if_false": "localhost"
-    },
-    "cmd-py" : {
-        "match" : {
-          "pattern": "Py",
-          "value": "%Mode%"
-        },
-        "if_true": "%Py%",
-        "if_false": ""
-    },
-    "cmd-js" : {
-        "match" : {
-          "pattern": "JS",
-          "value": "%Mode%"
-        },
-        "if_true": "JS",
-        "if_false": ""
-    },
-    "cmd-sql" : {
-        "match" : {
-          "pattern": "SQL",
-          "value": "%Mode%"
-        },
-        "if_true": "SQL",
-        "if_false": "localhost"
     }
   },
   "symbols" : {
@@ -142,9 +118,6 @@
       "fg": 15,
       "weight": 10,
       "padding" : 1
-    },
-    {
-      "text": "\u2222"
     },
     {
       "classes": ["noschema%schema%", "schema"],

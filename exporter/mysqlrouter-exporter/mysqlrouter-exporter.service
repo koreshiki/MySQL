@@ -1,0 +1,15 @@
+[Unit]
+Description=mysqlrouter-exporter
+Documentation=https://github.com/rluisr/mysqlrouter-exporter
+After=network-online.target
+
+[Service]
+Type=simple
+Environment="MYSQLROUTER_EXPORTER_URL=http://127.0.0.1:8080"
+Environment="MYSQLROUTER_EXPORTER_USER=koreshiki"
+Environment="MYSQLROUTER_EXPORTER_PASS=koreshiki"
+Environment="MYSQLROUTER_EXPORTER_PORT=49000"
+ExecStart=/usr/local/bin/mysqlrouter_exporter
+
+[Install]
+WantedBy=multi-user.target

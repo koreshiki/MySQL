@@ -1,0 +1,11 @@
+[Unit]
+Description=Mysqld Exporter
+Documentation=https://github.com/prometheus/mysqld_exporter
+
+[Service]
+Type=simple
+ExecStart=/home/prometheus/mysqld_exporter/mysqld_exporter --config.my-cnf=/home/prometheus/mysqld_exporter/.my.cnf
+Restart=on failure
+
+[Install]
+WantedBy=multi-user.target
